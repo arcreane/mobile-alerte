@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+
+//classe pour afficher le formulaire
+
 class formulaire extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -7,20 +10,20 @@ class formulaire extends StatelessWidget {
     return MaterialApp(
 
       title: 'Formulaire de tâche',
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,// pour enlever le debug de flutter par defaut
       home: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("images/fondd-2g.png"), fit: BoxFit.cover)),
+                image: AssetImage("images/fondd-2g.png"), fit: BoxFit.cover)),//image de background plein écran
         child: Scaffold(
-          backgroundColor: Colors.transparent,
+          backgroundColor: Colors.transparent,//mettre transparent pour qu'il soit sur l'image de fond
           appBar: AppBar(
             elevation: 0,
-            backgroundColor: Colors.transparent,
+            backgroundColor: Colors.transparent,// de même que pour scaffold
             title: Text('Formulaire de tâche',style: TextStyle(color: Colors.black, fontSize: 22.0, fontWeight: FontWeight.w600),),
             centerTitle: true,
-            //leading: IconButton(
-                /*icon: Icon(
+            /*leading: IconButton(
+                icon: Icon(
                   Icons.alarm,
                   color: (Colors.black),
 
@@ -34,9 +37,9 @@ class formulaire extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-                        logoimage(),
+                        logoimage(),// afficher l'image du logo, grace a la classe defini dans ce fichier 
                         SizedBox(height: 10.0),
-                        TextFormField(
+                        TextFormField( // debut des button du formulaire 
                         decoration: InputDecoration(
                         labelText: 'Nom de la tâche',
                         border: OutlineInputBorder()
@@ -50,7 +53,7 @@ class formulaire extends StatelessWidget {
                         ),
                         ),
 
-                        SizedBox(height: 10.0),
+                        SizedBox(height: 10.0),//permet de mettre les espaces
 
                         TextFormField(
                         decoration:  InputDecoration(
@@ -87,7 +90,7 @@ class formulaire extends StatelessWidget {
                               child: FlatButton(
                                 child: Text('Ajouter une tâche', style: TextStyle(fontSize: 22),textAlign: TextAlign.center ),
                                  onPressed: () => {},
-                                  shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
+                                  shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),//les bordeurs arrondi du buttons
                                     color: Color(0xFFcd9602),
                                      textColor: Colors.black,
                                ),
@@ -110,7 +113,7 @@ class formulaire extends StatelessWidget {
 
 }
 
-// class pour afficher le logo
+// class pour afficher le logo cloche
 class logoimage extends StatelessWidget   {
   @override
   Widget build(BuildContext context) {
