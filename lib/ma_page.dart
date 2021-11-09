@@ -1,34 +1,8 @@
-//import'package:flutter/material.dart';
-/*class Home extends StatelessWidget {
 
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        alignment: Alignment.center,
-        color: Colors.amber,
-        child: Text("Commencer", textDirection:TextDirection.ltr ,),
-        width: 200.0,
-        height: 40.0,
-      )
-    );
-  }
-}
-class Reminder extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    AssetImage assetImage =AssetImage('images/Reminder.png');
-    Image image = Image(image: assetImage);
-    return Container(child: image,);
-
-  }
-  Reminder();
-}
-*/
 import 'package:flutter/material.dart';
 
 
-
+//mettre le logo en image de fond de la page d'accueil 
 class pageacceuil extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -36,38 +10,20 @@ class pageacceuil extends StatelessWidget {
     return Scaffold(
         body: new Stack(
           children: <Widget>[
+            //mettre un container afin de mieux gérer la mise en page 
             new Container(
-
               decoration: new BoxDecoration(
                 image: new DecorationImage(
-                  image: new AssetImage("images/Reminder.png"), fit: BoxFit.cover,),
+                  image: new AssetImage("images/Reminder.png"), fit: BoxFit.cover,),//importer l'image
               ),
             ),
-
-            /*new Center(
-                  child: Center(child: logo(),),
-                ),*/
-
           ],
         )
-
-    );
-
-  }
-
+      );
+   }
 }
 
-
-
-/*
-class logo extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    AssetImage assetImage = AssetImage ('images/fond-2.jpg');
-    Image image = Image(image: assetImage);
-    return Container( child: image, width: 200,height: 200,alignment: Alignment.center,);
-  }
-}*/
+//créer un bouton qui permet de commencer la navigation dans l'application 
 class commencer extends StatelessWidget {
 
   @override
