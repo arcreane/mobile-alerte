@@ -47,7 +47,10 @@ class commencer extends StatelessWidget {
           ),
           ),
           color: new Color(0xff622f74),
-          onPressed: (){
+         onPressed: (){
+            Navigator.push( context,
+            MaterialPageRoute(builder:(context)=>Page_ELYAS()),// Elyas c'est ici que tu dois inclure ta page 
+            );
 
           },
         )
@@ -55,4 +58,5 @@ class commencer extends StatelessWidget {
     );
   }
 }
+
 
