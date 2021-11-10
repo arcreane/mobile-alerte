@@ -1,8 +1,6 @@
 
 import 'package:flutter/material.dart';
-
-
-//mettre le logo en image de fond de la page d'accueil 
+import'page_elyas.dart';
 class pageacceuil extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -10,53 +8,37 @@ class pageacceuil extends StatelessWidget {
     return Scaffold(
         body: new Stack(
           children: <Widget>[
-            //mettre un container afin de mieux gérer la mise en page 
             new Container(
+
               decoration: new BoxDecoration(
                 image: new DecorationImage(
-                  image: new AssetImage("images/Reminder.png"), fit: BoxFit.cover,),//importer l'image
+                  image: new AssetImage("images/Reminder.png"), fit: BoxFit.cover,),
               ),
+
             ),
+            //creation du bouton de démarrage
+            Padding(
+              padding: EdgeInsets.only(left: 200.0, right: 0.0,top:550.0),//caractéristiques de mise en page du bouton
+              child: RaisedButton(
+                  textColor: Colors.white,//couleur du teexte dans le bouton
+                  color: Colors.deepPurpleAccent, // couleur de fond du bouton
+                  child: Text("Commencer"),
+                  onPressed: () {
+                    Navigator.push( context,
+                      MaterialPageRoute(builder:(context)=>page_elyas()),// Elyas c'est ici que tu dois inclure ta page
+                    );
+
+                  },
+                  shape: new RoundedRectangleBorder(//mettre les bords du bouton en arrondi
+                      borderRadius: new BorderRadius.circular(80.0))),
+            )
           ],
         )
-      );
-   }
-}
 
-//créer un bouton qui permet de commencer la navigation dans l'application 
-class commencer extends StatelessWidget {
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading:IconButton(icon:Icon(Icons.menu),onPressed: (){
-
-        }),
-      title: Text("Reminder"),
-      actions:<Widget>[
-          IconButton(icon:Icon(Icons.menu),onPressed: (){
-           }),
-        ],
-      ),
-      body: Center(
-        child: RaisedButton(
-          child:Text('Liste des tâches',
-          style: TextStyle(
-            color: Colors.white,
-          ),
-          ),
-          color: new Color(0xff622f74),
-         onPressed: (){
-            Navigator.push( context,
-            MaterialPageRoute(builder:(context)=>Page_ELYAS()),// Elyas c'est ici que tu dois inclure ta page 
-            );
-
-          },
-        )
-      )
     );
+
   }
+
 }
 
 
