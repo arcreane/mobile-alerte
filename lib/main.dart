@@ -1,13 +1,17 @@
+import 'package:flutter/material.dart';
+import 'ma_page.dart';
+
+void main() => runApp(MyApp());
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,// cela permet d'enlever le debug de l'application par defaut
-      title: 'Reminder',//Titre de l'appli
-      theme: ThemeData(
-        primaryColor: Colors.deepPurple,
-      ),
-      home: pageacceuil (),//inclure la page d'accueil "ma_page.dart"
+      debugShowCheckedModeBanner: false,// Cela permet d'enlever le debug de l'application par defaut
+      title: 'Page accueil',
+      home: pageacceuil (),
     );
   }
 }
+
+
