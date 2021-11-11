@@ -1,46 +1,51 @@
+import 'package:applycelia/ma_page.dart';
 import 'package:flutter/material.dart';
-
-
-//classe pour afficher le formulaire
-
+import 'page_elyas.dart';
 class formulaire extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
     return MaterialApp(
-
+//mettre le fond de la page
       title: 'Formulaire de tâche',
-      debugShowCheckedModeBanner: false,// pour enlever le debug de flutter par defaut
+      debugShowCheckedModeBanner: false,
       home: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("images/fondd-2g.png"), fit: BoxFit.cover)),//image de background plein écran
+                image: AssetImage("images/fondd-2g.png"), fit: BoxFit.cover)),
         child: Scaffold(
-          backgroundColor: Colors.transparent,//mettre transparent pour qu'il soit sur l'image de fond
+          backgroundColor: Colors.transparent,
           appBar: AppBar(
+            //barre de navigation 
             elevation: 0,
-            backgroundColor: Colors.transparent,// de même que pour scaffold
+            backgroundColor: Colors.transparent,
             title: Text('Formulaire de tâche',style: TextStyle(color: Colors.black, fontSize: 22.0, fontWeight: FontWeight.w600),),
             centerTitle: true,
-            /*leading: IconButton(
+            //l'icone de retour arriere
+            leading: IconButton(
                 icon: Icon(
-                  Icons.alarm,
+                  Icons.arrow_back_ios,
                   color: (Colors.black),
-
                 ),
-                onPressed: () {}),*/
-          ),
+              //clicker sur le bonton retour a la page précédente
+                onPressed: () {
+                  Navigator.push( context,
+                    MaterialPageRoute(builder:(context)=>page_elyas()),
+                  );
+                }),
+              ),
+          // creer le formulaire
           body: SingleChildScrollView(
           padding: EdgeInsets.symmetric(horizontal: 60.0, vertical: 70.0),
           child: Form(
-//            key: _keyForm,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-                        logoimage(),// afficher l'image du logo, grace a la classe defini dans ce fichier 
+                        logoimage(),
                         SizedBox(height: 10.0),
-                        TextFormField( // debut des button du formulaire 
+                        TextFormField(
                         decoration: InputDecoration(
+                        //case nom de la tache 
                         labelText: 'Nom de la tâche',
                         border: OutlineInputBorder()
                         ),
@@ -53,7 +58,7 @@ class formulaire extends StatelessWidget {
                         ),
                         ),
 
-                        SizedBox(height: 10.0),//permet de mettre les espaces
+                        SizedBox(height: 10.0),
 
                         TextFormField(
                         decoration:  InputDecoration(
@@ -89,31 +94,27 @@ class formulaire extends StatelessWidget {
                              width: double.infinity,
                               child: FlatButton(
                                 child: Text('Ajouter une tâche', style: TextStyle(fontSize: 22),textAlign: TextAlign.center ),
-                                 onPressed: () => {},
-                                  shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),//les bordeurs arrondi du buttons
+                                 onPressed: () => {
+                                   Navigator.push( context,
+                                     MaterialPageRoute(builder:(context)=>page_elyas()),
+                                   ),
+                                 },
+                                  shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
                                     color: Color(0xFFcd9602),
                                      textColor: Colors.black,
-                               ),
-                          ),
                         ),
+                     ),
+                  ),
                 ],
-
-
+              ),
             ),
           ),
-
-
-          ),
-
         ),
       ),
-
     );
   }
-
 }
-
-// class pour afficher le logo cloche
+// class pour afficher le logo
 class logoimage extends StatelessWidget   {
   @override
   Widget build(BuildContext context) {
