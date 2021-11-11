@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
 import 'ma_page.dart';
-
-void main() => runApp(MyApp());
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,// Cela permet d'enlever le debug de l'application par defaut
-      title: 'Page accueil',
-      home: pageacceuil (),
+      debugShowCheckedModeBanner: false,// cela permet d'enlever la bannière de debug
+      theme: ThemeData(
+      ),
+      home: pageacceuil(),
     );
   }
 }
-
 
