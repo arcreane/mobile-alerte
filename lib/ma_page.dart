@@ -1,4 +1,4 @@
-
+//import 'package:applycelia/form.dart';
 import 'package:flutter/material.dart';
 import'page_elyas.dart';
 class pageacceuil extends StatelessWidget {
@@ -9,36 +9,37 @@ class pageacceuil extends StatelessWidget {
         body: new Stack(
           children: <Widget>[
             new Container(
-
+              //mettre le backround
               decoration: new BoxDecoration(
                 image: new DecorationImage(
                   image: new AssetImage("images/Reminder.png"), fit: BoxFit.cover,),
-              ),
-
-            ),
-            //creation du bouton de démarrage
-            Padding(
-              padding: EdgeInsets.only(left: 200.0, right: 0.0,top:550.0),//caractéristiques de mise en page du bouton
-              child: RaisedButton(
-                  textColor: Colors.white,//couleur du teexte dans le bouton
-                  color: Colors.deepPurpleAccent, // couleur de fond du bouton
-                  child: Text("Commencer"),
-                  onPressed: () {
+                  ),
+                ),
+            
+            //creer le bonton commencer qui à pour role de nous orienter vers les autres pages afin d'executer les taches de l'application
+            Align(
+              alignment: Alignment.bottomCenter,//centrer les boutons
+                child: Container(
+                margin: EdgeInsets.symmetric(horizontal: 50, vertical: 40),//mettre les marges
+                width: double.infinity,
+                child: FlatButton(
+                child: Text('Commencer', style: TextStyle(fontSize: 22),textAlign: TextAlign.center ),//nommer le bouton
+                //clicker sur le bouton commencer
+                onPressed: () => {
+                //faire appel à la page suivante
                     Navigator.push( context,
-                      MaterialPageRoute(builder:(context)=>page_elyas()),// Elyas c'est ici que tu dois inclure ta page
-                    );
-
+                    MaterialPageRoute(builder:(context)=>page_elyas()),
+                    ),
                   },
-                  shape: new RoundedRectangleBorder(//mettre les bords du bouton en arrondi
-                      borderRadius: new BorderRadius.circular(80.0))),
-            )
-          ],
-        )
-
-    );
-
+                //mettre les formes arrondies au bouton et son style
+                shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
+                color: Color(0xFFcd9602),
+                textColor: Colors.black,
+                  ),
+                )
+              )
+            ],
+          )
+       );
+     }
   }
-
-}
-
-
