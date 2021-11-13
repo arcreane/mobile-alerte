@@ -1,6 +1,8 @@
 //import 'package:applycelia/form.dart';
 import 'package:flutter/material.dart';
 import'page_elyas.dart';
+
+
 class pageacceuil extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -12,16 +14,17 @@ class pageacceuil extends StatelessWidget {
               //mettre le backround
               decoration: new BoxDecoration(
                 image: new DecorationImage(
-                  image: new AssetImage("images/Reminder.png"), fit: BoxFit.cover,),
+                  image: new AssetImage("images/FOND_01.png"), fit: BoxFit.cover,),
               ),
 //creer le bonton commencer qui à pour role de nous orienter vers les autres pages afin d'executer les taches de l'application
-            ),Align(
+            ),
+            Align(
               alignment: Alignment.bottomCenter,//centrer les boutons
               child: Container(
-              margin: EdgeInsets.symmetric(horizontal: 50, vertical: 40),//mettre les marges
+              margin: EdgeInsets.symmetric(horizontal: 40, vertical: 30),//mettre les marges
               width: double.infinity,
               child: FlatButton(
-              child: Text('Commencer', style: TextStyle(fontSize: 22),textAlign: TextAlign.center ),//nommer le bouton
+              child: Text('Commencer', style: TextStyle(color: Color(0xFF009075), fontSize: 18.0, fontWeight: FontWeight.normal),textAlign: TextAlign.center ),//nommer le bouton
               //clicker sur le bouton commencer
                 onPressed: () => {
                 //faire appel à la page suivante
@@ -31,7 +34,7 @@ class pageacceuil extends StatelessWidget {
               },
                 //mettre les formes arrondies au bouton et son style
               shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
-              color: Color(0xFFcd9602),
+              color: Color(0xFFFFFFFF),
               textColor: Colors.black,
               ),
               )
