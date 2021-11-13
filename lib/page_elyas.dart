@@ -16,21 +16,21 @@ class page_elyas extends StatelessWidget {
       home: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("images/fondd-2g.png"), fit: BoxFit.cover)),
+                image: AssetImage("images/FOND_03.png"), fit: BoxFit.cover)),
         child: Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
             elevation: 0,
             backgroundColor: Colors.transparent,
             title: Text('Liste des tâches', style: TextStyle(
-                color: Colors.black,
+                color:  Color(0xFF009075),
                 fontSize: 22.0,
                 fontWeight: FontWeight.w600),),
             centerTitle: true,
             leading: IconButton(
                 icon: Icon(
                   Icons.arrow_back_ios,
-                  color: (Colors.black),
+                    color:  Color(0xFF009075)
 
                 ),
                 onPressed: () {
@@ -53,11 +53,11 @@ class page_elyas extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       margin: EdgeInsets.symmetric(
-                          horizontal: 50, vertical: 40),
+                          horizontal: 30, vertical: 40),
                       width: double.infinity,
                       child: FlatButton(
                         child: Text('afficher les listes', style: TextStyle(
-                            fontSize: 22), textAlign: TextAlign.center),
+                            fontSize: 18,fontWeight: FontWeight.normal), textAlign: TextAlign.center),
                         onPressed: () =>
                         {
                           Navigator.push(context,
@@ -69,8 +69,8 @@ class page_elyas extends StatelessWidget {
 
                         shape: RoundedRectangleBorder(
                             borderRadius: new BorderRadius.circular(30.0)),
-                        color: Color(0xFFcd9602),
-                        textColor: Colors.black,
+                        color: Color(0xFF009075),
+                        textColor: Colors.white,
                       ),
                     ),
                   ),
@@ -84,8 +84,8 @@ class page_elyas extends StatelessWidget {
           ),
           bottomNavigationBar: BottomNavigationBar(
             currentIndex: 0,
-            backgroundColor: Color(0xFFcd9602),
-            selectedItemColor: Colors.black,
+            backgroundColor: Color(0xFF009075),
+            selectedItemColor: Colors.white,
             items: [
               BottomNavigationBarItem(
                 icon: Icon(Icons.home),
@@ -108,6 +108,8 @@ class page_elyas extends StatelessWidget {
     );
   }
 }
+
+
 
 
 
