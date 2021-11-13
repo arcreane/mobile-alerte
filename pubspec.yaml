@@ -19,7 +19,7 @@ version: 1.0.0+1
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
-
+  flutter: ">=1.17.0"
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
 # consider running `flutter pub upgrade --major-versions`. Alternatively,
@@ -30,8 +30,15 @@ dependencies:
   flutter:
     sdk: flutter
   # format date time
-  intl: ^0.16.1
+  intl: ^0.17.0
   table_calendar: ^2.3.1
+  date_time_picker: ^2.1.0
+  date_field: ^2.1.2
+  f_datetimerangepicker: ^0.1.4
+  icon_picker: ^1.0.0
+  flutter_localizations:
+    sdk: flutter
+
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -40,6 +47,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -54,6 +62,7 @@ dev_dependencies:
 # The following section is specific to Flutter.
 flutter:
 
+
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -61,10 +70,13 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - images/logo.png
     - images/fondd-2.png
     - images/fondd-2g.png
     - images/Reminder.png
+    - images/FOND_01.png
+    - images/FOND_02.png
+    - images/FOND_03.png
+    - images/logo_reminder.png
 
 
 
