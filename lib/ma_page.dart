@@ -1,20 +1,19 @@
-//import 'package:applycelia/form.dart';
 import 'package:flutter/material.dart';
-import'page_elyas.dart';
+import 'package:mobilealerte/recipeListescreen.dart';
+
 
 
 class pageacceuil extends StatelessWidget {
-  @override
+  @override//@override just points out that the function is also defined in an ancestor class
   Widget build(BuildContext context) {
-
-    return Scaffold(
+    return Scaffold(//The Scaffold class is an extensible widget that fills the available space or screen
         body: new Stack(
           children: <Widget>[
             new Container(
               //mettre le backround
               decoration: new BoxDecoration(
                 image: new DecorationImage(
-                  image: new AssetImage("images/FOND_01.png"), fit: BoxFit.cover,),
+                  image: new AssetImage("images/FOND_01.png"), fit: BoxFit.cover,),// importation de l'images dans l'Asset
               ),
 //creer le bonton commencer qui à pour role de nous orienter vers les autres pages afin d'executer les taches de l'application
             ),
@@ -29,7 +28,7 @@ class pageacceuil extends StatelessWidget {
                 onPressed: () => {
                 //faire appel à la page suivante
                     Navigator.push( context,
-                    MaterialPageRoute(builder:(context)=>page_elyas()),
+                    MaterialPageRoute(builder:(context)=>RecipeListScreen()),
                     ),
               },
                 //mettre les formes arrondies au bouton et son style
