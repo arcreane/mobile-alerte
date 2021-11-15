@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'ma_page.dart';
+
+// call of functions which is in the page "my_page" thanks to 'Home'
 void main() {
   runApp(const MyApp());
 }
@@ -10,15 +12,15 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,// cela permet d'enlever la bannière de debug
+    return MaterialApp( //MaterialApp is a Flutter class that provides a material design layout
+      debugShowCheckedModeBanner: false,// this allows you to remove the debug banner
       theme: ThemeData(
       ),
-      home: pageacceuil(),
-    );//MaterialApp
+      home: pageacceuil(),//we call the function, in the file 'my_page'
+
+    );
   }
 }
-
 
 
 
