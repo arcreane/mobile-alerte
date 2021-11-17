@@ -5,13 +5,13 @@ import 'ma_page.dart';
 void main() {
   runApp(const MyApp());
 }
-
+//Principal
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext test) {
     return MaterialApp( //MaterialApp is a Flutter class that provides a material design layout
       debugShowCheckedModeBanner: false,// this allows you to remove the debug banner
       theme: ThemeData(
