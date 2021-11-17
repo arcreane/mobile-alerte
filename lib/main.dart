@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
 
   // This widget is the root of your application.
   @override
-  Widget build(BuildContext test) {
+  Widget build(BuildContext context) {
     return MaterialApp( //MaterialApp is a Flutter class that provides a material design layout
       debugShowCheckedModeBanner: false,// this allows you to remove the debug banner
       theme: ThemeData(
@@ -21,6 +21,5 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
 
 
