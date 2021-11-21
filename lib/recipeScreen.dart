@@ -26,13 +26,13 @@ class RecipeScreen extends StatelessWidget {
                       child: Text(recipe.title,
                           style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 25)),
-                    ),
+                          ),
                     Text(recipe.user,
                         style: TextStyle(color: Colors.grey[500], fontSize: 16))
-                  ],
-                )),
-          ],
-        ));
+                         ],
+                       )),
+                      ],
+                    ));
 
     Widget buttonSection = Container(
       padding: const EdgeInsets.all(8),
@@ -68,10 +68,8 @@ class RecipeScreen extends StatelessWidget {
                   Navigator.push( context,
                     MaterialPageRoute(builder:(context)=> RecipeListScreen()),
                   );
-
                 }),
-
-          ),
+              ),
 
           body: ListView(
               children: [
@@ -100,7 +98,7 @@ class RecipeScreen extends StatelessWidget {
             MaterialPageRoute(builder:(context)=>pageacceuil()),
           );
         },
-        ),
+       ),
     new Expanded(child: new SizedBox()),
     IconButton(
     icon: Icon(
@@ -110,17 +108,15 @@ class RecipeScreen extends StatelessWidget {
     onPressed: () {
       Navigator.push( context,
         MaterialPageRoute(builder:(context)=>RecipeFormScreen()),
-      );
-    },
-    ),
-    ],
-    ),
-
+        );
+       },
       ),
-
-    )
-    );
-  }
+     ],
+    ),
+  ),
+ )
+);
+}
 
   Column _buildButtonColumn(Color color, IconData icon, String label) {
     return Column(
@@ -135,7 +131,7 @@ class RecipeScreen extends StatelessWidget {
               fontWeight: FontWeight.w400,
               color: color,
             ))
-      ],
-    );
-  }
-}
+           ],
+          );
+         }
+        }
