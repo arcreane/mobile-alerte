@@ -1,7 +1,8 @@
-//import 'package:hive/hive.dart';
-//import 'package:mobilealerte/recipe.dart';
-//import 'package:path_provider/path_provider.dart';
-/*
+
+import 'package:flutter_app/recipe.dart';
+import 'package:hive/hive.dart';
+import 'package:path_provider/path_provider.dart';
+
 class RecipeBox {
   static final RecipeBox instance = RecipeBox();
   static Box box;
@@ -18,14 +19,23 @@ class RecipeBox {
   }
 
   static final List<Recipe> recipes = [ Recipe(
-    "moi",
-    "idir ",
-    "idir"
+      "Docteur Merces",
+      " Neurologue",
+      "FOND_01.png",
+      "ihzefihzeiofhzefih",
+      false,
+      50,
+    DateTime.now(),
   ),
     Recipe(
-      "idir",
-      "idir",
-      " idir",
-    )
+        "Docteur Merces",
+        " Neurologue",
+        "FOND_01.png",
+        "ihzefihzeiofhzefih",
+        true,
+        33,
+        DateTime.now(),
+    ),
+
   ];
-}*/
+}
