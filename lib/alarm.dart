@@ -19,19 +19,19 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Container(
             decoration: BoxDecoration( //allows you to put an image in the background of our application
                 image: DecorationImage(
-                    image: AssetImage("images/FOND_03.png"), fit: BoxFit.cover)),
+                    image: AssetImage("images/FOND_03.png"), fit: BoxFit.cover)), // ça permet de mettre l'image en background 
    child: Scaffold(
         appBar: AppBar(
           //AppBar includes a Tool Bar and other potential Widgets
           elevation: 0,
           backgroundColor: Colors.transparent,
-          leading: IconButton(
+          leading: IconButton( // le bouton pour revenir en arrière
               icon: Icon(
                   Icons.arrow_back_ios,
                   color: Color(0xFF009075)
 
               ),
-              onPressed: () {
+              onPressed: () { // fonction pour faire un retour sur la page qu'on souhaite
                 Navigator.push(context,
                   MaterialPageRoute(builder: (context) => RecipeListScreen()),
                 );
@@ -62,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Padding(
                       padding: const EdgeInsets.all(50.0),
                       child: Shadow(child: Image.asset(
-                        'images/clock.png', scale: 3, color: Colors.black,)),
+                        'images/clock.png', scale: 3, color: Colors.black,)), //afficher l'image de l'horloge
                     ),
 
                   ],
