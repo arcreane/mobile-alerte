@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/favoriteChangeNotifier.dart';
+import 'alarm.dart';
+import 'favoriteChangeNotifier.dart';
 import 'package:provider/provider.dart';
 import 'recipe.dart';
 import 'recipeListScreen.dart';
@@ -16,6 +17,7 @@ class RecipeScreen extends StatelessWidget {
     Widget titleSection = Container(
         padding: const EdgeInsets.all(8),
         child: Row(
+
           children: [
             Expanded(
                 child: Column(
@@ -23,12 +25,21 @@ class RecipeScreen extends StatelessWidget {
                   children: [
                     Container(
                       padding: const EdgeInsets.only(bottom: 8),
-                      child: Text(recipe.title,
+                      child:
+                      Text(recipe.title,
                           style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 25)),
                           ),
                     Text(recipe.user,
-                        style: TextStyle(color: Colors.grey[500], fontSize: 16))
+                        style: TextStyle(color: Colors.grey[500], fontSize: 16)),
+                    IconButton (
+                        icon: Icon(Icons.alarm,color: Colors.red),
+                        onPressed: () {
+                          Navigator.push( context,
+                            MaterialPageRoute(builder:(context)=> MyHomePage()),
+                          );
+                        }
+                    ),
                          ],
                        )),
                       ],
@@ -38,8 +49,11 @@ class RecipeScreen extends StatelessWidget {
       padding: const EdgeInsets.all(8),
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
         _buildButtonColumn(Color(0xFF009075), Icons.assignment_turned_in_outlined, "supprimer"),
-        _buildButtonColumn(Colors.red, Icons.cancel_outlined, "modifier")
+        _buildButtonColumn(Colors.black, Icons.cancel_outlined, "modifier"),
+
       ]),
+
+
     );
 
     Widget descriptionSection = Container(
@@ -69,7 +83,9 @@ class RecipeScreen extends StatelessWidget {
                     MaterialPageRoute(builder:(context)=> RecipeListScreen()),
                   );
                 }),
+
               ),
+
 
           body: ListView(
               children: [
