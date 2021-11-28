@@ -21,6 +21,8 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+
+  shadow: ^0.1.5
   provider: ^4.3.3
   transparent_image: ^1.0.0
   cached_network_image: ^2.5.0
@@ -75,6 +77,7 @@ flutter:
     - images/FOND_03.png
     - images/logo_reminder.png
     - images/rendez-vous.jpg
+    - images/clock.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -101,3 +104,4 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
