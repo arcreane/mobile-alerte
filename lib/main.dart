@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/recipeBox.dart';
-import 'package:flutter_app/recipeListScreen.dart';
-import 'package:flutter_app/recipeScreen.dart';
-import 'package:flutter_app/recipeformscreen.dart';
+import 'package:mobilealerte/recipeScreen.dart';
+import 'recipeBox.dart';
+import 'recipeListScreen.dart';
+import 'precipeScreen.dart';
+import 'recipeformscreen.dart';
 
 import 'ma_page.dart';
 
