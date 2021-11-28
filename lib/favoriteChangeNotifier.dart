@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter_app/recipe.dart';
-import 'package:flutter_app/recipeBox.dart';
+import 'recipe.dart';
+import 'recipeBox.dart';
 
 class FavoriteChangeNotifier with ChangeNotifier {
   Recipe recipe;
