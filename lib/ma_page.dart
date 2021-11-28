@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app/recipeListScreen.dart';
+import 'recipeListScreen.dart';
 
 
 
